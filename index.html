@@ -1,63 +1,161 @@
+
+
 <!DOCTYPE html>
-<html>
+<html lang="ar">
 <head>
-    <meta charset="UTF-8">
-    <title>شاهين لتصميم المواقع</title>
+<meta charset="UTF-8">
+<title>شاهين لتصميم المواقع</title>
 
-    <style>
-        body {
-            font-family: Arial;
-            text-align: center;
-            background: #f0f0f0;
-        }
+<style>
+body {
+    margin: 0;
+    font-family: Arial;
+    background: #f5f5f5;
+}
 
-        header {
-            background: #222;
-            color: white;
-            padding: 20px;
-        }
+/* NAVBAR */
+nav {
+    background: #111;
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
-        section {
-            margin: 20px;
-            padding: 20px;
-            background: white;
-            border-radius: 10px;
-        }
+nav h2 {
+    margin: 0;
+}
 
-        button {
-            padding: 10px 20px;
-            background: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-        }
-    </style>
+nav a {
+    color: white;
+    margin: 0 10px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: #00c6ff;
+}
+
+/* HERO */
+.hero {
+    background: linear-gradient(to right, #007bff, #00c6ff);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.hero h1 {
+    font-size: 40px;
+}
+
+/* SECTION */
+section {
+    padding: 40px;
+    text-align: center;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    padding: 20px;
+    width: 250px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* BUTTON */
+button {
+    padding: 12px 25px;
+    background: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* FOOTER */
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+</style>
 </head>
 
 <body>
 
-<header>
-    <h1>🌐 شاهين لتصميم المواقع</h1>
-    <p>تصميم مواقع احترافية بأسعار مناسبة</p>
-</header>
+<!-- NAVBAR -->
+<nav>
+    <h2>🌐 شاهين</h2>
+    <div>
+        <a href="#">الرئيسية</a>
+        <a href="#">الخدمات</a>
+        <a href="#">تواصل</a>
+    </div>
+</nav>
 
+<!-- HERO -->
+<div class="hero">
+    <h1>تصميم مواقع احترافية</h1>
+    <p>أبني لك موقعك الخاص بأفضل تصميم</p>
+    <button onclick="alert('راسلني الآن 🚀')">ابدأ الآن</button>
+</div>
+
+<!-- ABOUT -->
 <section>
     <h2>من أنا؟</h2>
-    <p>أنا شاهين، مبرمج ومصمم مواقع أساعدك على إنشاء موقعك الخاص بسهولة 😄</p>
+    <p>أنا شاهين، مطور مواقع أساعدك على إنشاء موقعك بسهولة وبشكل احترافي.</p>
 </section>
 
+<!-- SERVICES -->
 <section>
     <h2>خدماتي</h2>
-    <p>
-        ✔️ تصميم مواقع بسيطة<br>
-        ✔️ صفحات شخصية<br>
-        ✔️ مواقع أعمال
-    </p>
+    <div class="cards">
+        <div class="card">
+            <h3>🌐 موقع شخصي</h3>
+            <p>موقع يعرض معلوماتك</p>
+        </div>
 
-    <button onclick="alert('تواصل معي عبر واتساب!')">
-        تواصل معي
-    </button>
+        <div class="card">
+            <h3>💼 موقع أعمال</h3>
+            <p>موقع لشركتك أو مشروعك</p>
+        </div>
+
+        <div class="card">
+            <h3>⚡ موقع سريع</h3>
+            <p>أداء عالي وسريع</p>
+        </div>
+    </div>
 </section>
+
+<!-- CONTACT -->
+<section>
+    <h2>تواصل معي</h2>
+    <button onclick="alert('واتساب 📱')">راسلني</button>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <p>© 2026 شاهين - جميع الحقوق محفوظة</p>
+</footer>
 
 </body>
 </html>

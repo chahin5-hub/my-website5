@@ -2,44 +2,42 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>تسجيل الدخول</title>
+<link rel="stylesheet" href="style.css">
 
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
 <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
 <script src="firebase.js"></script>
-
 </head>
 
 <body>
 
-<h1>تسجيل الدخول 🔐</h1>
+<div class="form">
+  <h1>🔐 تسجيل الدخول</h1>
 
-<input id="email" type="email" placeholder="Email"><br><br>
-<input id="password" type="password" placeholder="Password"><br><br>
+  <input id="email" type="email" placeholder="Email"><br>
+  <input id="password" type="password" placeholder="Password"><br>
 
-<button onclick="login()">دخول</button>
-<button onclick="signup()">تسجيل</button>
+  <button onclick="login()">دخول</button>
+  <button onclick="signup()">تسجيل</button>
+</div>
 
 <script>
 function signup() {
-  let email = document.getElementById("email").value;
-  let password = document.getElementById("password").value;
-
-  firebase.auth().createUserWithEmailAndPassword(email, password)
-  .then(() => alert("تم إنشاء الحساب"))
-  .catch(err => alert(err.message));
+  firebase.auth().createUserWithEmailAndPassword(
+    email.value, password.value
+  ).then(() => {
+    alert("تم إنشاء الحساب");
+  }).catch(err => alert(err.message));
 }
 
 function login() {
-  let email = document.getElementById("email").value;
-  let password = document.getElementById("password").value;
-
-  firebase.auth().signInWithEmailAndPassword(email, password)
-  .then(() => {
-    alert("تم تسجيل الدخول");
+  firebase.auth().signInWithEmailAndPassword(
+    email.value, password.value
+  ).then(() => {
     window.location.href = "dashboard.html";
-  })
-  .catch(err => alert(err.message));
+  }).catch(err => alert(err.message));
 }
 </script>
 

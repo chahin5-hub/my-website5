@@ -4,7 +4,100 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WebPro</title>
-<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+  margin:0;
+  font-family:'Segoe UI',sans-serif;
+  background:linear-gradient(135deg,#0f172a,#020617);
+  color:white;
+}
+
+/* Navbar */
+nav{
+  display:flex;
+  justify-content:space-between;
+  padding:20px 40px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  position:sticky;
+  top:0;
+}
+
+nav h2{
+  color:#38bdf8;
+}
+
+nav a{
+  color:white;
+  margin-left:15px;
+  text-decoration:none;
+}
+
+/* Hero */
+.hero{
+  text-align:center;
+  padding:120px 20px;
+}
+
+.hero h1{
+  font-size:50px;
+}
+
+.hero p{
+  font-size:18px;
+  opacity:0.8;
+}
+
+.btn{
+  display:inline-block;
+  margin-top:20px;
+  background:linear-gradient(45deg,#38bdf8,#0ea5e9);
+  padding:12px 30px;
+  border-radius:12px;
+  color:black;
+  font-weight:bold;
+  transition:0.3s;
+}
+
+.btn:hover{
+  transform:scale(1.1);
+}
+
+/* Cards */
+.section{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.cards{
+  display:flex;
+  justify-content:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+
+.card{
+  width:250px;
+  padding:20px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(10px);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-10px) scale(1.05);
+}
+
+/* Footer */
+footer{
+  text-align:center;
+  padding:20px;
+  opacity:0.6;
+}
+</style>
+
 </head>
 
 <body>
@@ -12,17 +105,31 @@
 <nav>
   <h2>WebPro</h2>
   <div>
-    <a href="projects.html">أعمالي</a>
-    <a href="order.html">طلب خدمة</a>
-    <a href="login.html">تسجيل الدخول</a>
+    <a href="#">الرئيسية</a>
+    <a href="#">الخدمات</a>
+    <a href="#">اتصل</a>
   </div>
 </nav>
 
 <section class="hero">
-  <h1>🚀 موقع احترافي حقيقي</h1>
-  <p>ابدأ مشروعك الآن</p>
-  <a href="order.html" class="btn">اطلب الآن</a>
+  <h1>🚀 موقع احترافي خرافي</h1>
+  <p>تصميم حديث + تجربة مستخدم قوية</p>
+  <a href="#" class="btn">ابدأ الآن</a>
 </section>
+
+<section class="section">
+  <h2>✨ خدماتنا</h2>
+
+  <div class="cards">
+    <div class="card">💻 تصميم مواقع</div>
+    <div class="card">🎨 UI/UX احترافي</div>
+    <div class="card">⚡ سرعة عالية</div>
+  </div>
+</section>
+
+<footer>
+  © 2026 WebPro
+</footer>
 
 </body>
 </html>

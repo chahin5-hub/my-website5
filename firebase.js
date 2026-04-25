@@ -1,7 +1,10 @@
 const firebaseConfig = {
-  apiKey: "PUT_YOUR_KEY",
-  authDomain: "PUT_YOUR_DOMAIN",
-  projectId: "PUT_YOUR_PROJECT_ID"
+  apiKey: "YOUR_KEY",
+  authDomain: "YOUR_DOMAIN",
+  projectId: "YOUR_ID"
 };
 
 firebase.initializeApp(firebaseConfig);
+
+// Firestore
+const db = firebase.firestore();

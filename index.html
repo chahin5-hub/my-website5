@@ -5,6 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>WebPro</title>
 
+<!-- AOS Animation -->
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
 <style>
 body{
   margin:0;
@@ -24,10 +27,6 @@ nav{
   top:0;
 }
 
-nav h2{
-  color:#38bdf8;
-}
-
 nav a{
   color:white;
   margin-left:15px;
@@ -44,10 +43,6 @@ nav a{
   font-size:50px;
 }
 
-.hero p{
-  opacity:0.8;
-}
-
 .btn{
   display:inline-block;
   margin-top:20px;
@@ -55,20 +50,15 @@ nav a{
   padding:12px 30px;
   border-radius:12px;
   color:black;
-  font-weight:bold;
-  transition:0.3s;
 }
 
-.btn:hover{
-  transform:scale(1.1);
-}
-
-/* Sections */
+/* Section */
 .section{
   padding:80px 20px;
   text-align:center;
 }
 
+/* Cards */
 .cards{
   display:flex;
   justify-content:center;
@@ -91,37 +81,51 @@ nav a{
   object-fit:cover;
 }
 
-.card h3{
-  padding:10px;
-}
-
 .card:hover{
-  transform:translateY(-10px) scale(1.05);
+  transform:scale(1.05);
 }
 
-/* Portfolio */
-.portfolio{
+/* Pricing */
+.pricing{
   display:flex;
   justify-content:center;
   gap:20px;
   flex-wrap:wrap;
 }
 
-.portfolio img{
-  width:300px;
-  border-radius:15px;
-  transition:0.3s;
-}
-
-.portfolio img:hover{
-  transform:scale(1.05);
-}
-
-/* Footer */
-footer{
-  text-align:center;
+.price{
+  background:#1e293b;
   padding:20px;
-  opacity:0.6;
+  border-radius:15px;
+  width:200px;
+}
+
+.price button{
+  margin-top:10px;
+  background:#38bdf8;
+  border:none;
+  padding:10px;
+  cursor:pointer;
+}
+
+/* Portfolio */
+.portfolio img{
+  width:280px;
+  margin:10px;
+  border-radius:15px;
+}
+
+/* WhatsApp */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  padding:15px;
+  border-radius:50%;
+  font-size:25px;
+  color:white;
+  text-decoration:none;
 }
 </style>
 
@@ -132,57 +136,89 @@ footer{
 <nav>
   <h2>WebPro</h2>
   <div>
-    <a href="#">الرئيسية</a>
     <a href="#services">الخدمات</a>
+    <a href="#pricing">الأسعار</a>
     <a href="#portfolio">أعمالنا</a>
   </div>
 </nav>
 
 <!-- Hero -->
-<section class="hero">
-  <h1>🚀 تصميم مواقع احترافية</h1>
-  <p>نحوّل فكرتك إلى موقع حقيقي يربح المال 💰</p>
-  <a href="#" class="btn">ابدأ الآن</a>
+<section class="hero" data-aos="fade-up">
+  <h1>🚀 موقع احترافي مثل Fiverr</h1>
+  <p>ابدأ الربح من خدماتك الآن 💰</p>
+  <a href="#pricing" class="btn">ابدأ الآن</a>
 </section>
 
 <!-- Services -->
 <section class="section" id="services">
-  <h2>✨ خدماتنا</h2>
+  <h2 data-aos="fade-up">✨ خدماتنا</h2>
 
   <div class="cards">
-
-    <div class="card">
+    <div class="card" data-aos="fade-right">
       <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
-      <h3>💻 تطوير مواقع</h3>
+      <h3>تطوير مواقع</h3>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="fade-up">
       <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d">
-      <h3>🎨 تصميم UI/UX</h3>
+      <h3>تصميم UI</h3>
     </div>
 
-    <div class="card">
+    <div class="card" data-aos="fade-left">
       <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6">
-      <h3>⚡ أداء وسرعة</h3>
+      <h3>تحسين الأداء</h3>
+    </div>
+  </div>
+</section>
+
+<!-- Pricing -->
+<section class="section" id="pricing">
+  <h2 data-aos="fade-up">💰 الأسعار</h2>
+
+  <div class="pricing">
+    <div class="price" data-aos="zoom-in">
+      <h3>Basic</h3>
+      <p>10$</p>
+      <button onclick="order()">اطلب</button>
     </div>
 
+    <div class="price" data-aos="zoom-in">
+      <h3>Pro</h3>
+      <p>25$</p>
+      <button onclick="order()">اطلب</button>
+    </div>
+
+    <div class="price" data-aos="zoom-in">
+      <h3>VIP</h3>
+      <p>50$</p>
+      <button onclick="order()">اطلب</button>
+    </div>
   </div>
 </section>
 
 <!-- Portfolio -->
 <section class="section" id="portfolio">
-  <h2>💼 أعمالنا</h2>
+  <h2 data-aos="fade-up">💼 أعمالنا</h2>
 
   <div class="portfolio">
-    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f">
-    <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
-    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
+    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f" data-aos="zoom-in">
+    <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7" data-aos="zoom-in">
+    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c" data-aos="zoom-in">
   </div>
 </section>
 
-<footer>
-  © 2026 WebPro
-</footer>
+<!-- WhatsApp -->
+<a class="whatsapp" href="https://wa.me/213XXXXXXXXX">💬</a>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+AOS.init();
+
+function order(){
+  window.location.href = "https://wa.me/213XXXXXXXXX";
+}
+</script>
 
 </body>
 </html>

@@ -45,7 +45,6 @@ nav a{
 }
 
 .hero p{
-  font-size:18px;
   opacity:0.8;
 }
 
@@ -64,7 +63,7 @@ nav a{
   transform:scale(1.1);
 }
 
-/* Cards */
+/* Sections */
 .section{
   padding:80px 20px;
   text-align:center;
@@ -78,16 +77,44 @@ nav a{
 }
 
 .card{
-  width:250px;
-  padding:20px;
+  width:260px;
   border-radius:20px;
+  overflow:hidden;
   background:rgba(255,255,255,0.05);
   backdrop-filter:blur(10px);
   transition:0.3s;
 }
 
+.card img{
+  width:100%;
+  height:160px;
+  object-fit:cover;
+}
+
+.card h3{
+  padding:10px;
+}
+
 .card:hover{
   transform:translateY(-10px) scale(1.05);
+}
+
+/* Portfolio */
+.portfolio{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
+}
+
+.portfolio img{
+  width:300px;
+  border-radius:15px;
+  transition:0.3s;
+}
+
+.portfolio img:hover{
+  transform:scale(1.05);
 }
 
 /* Footer */
@@ -106,24 +133,50 @@ footer{
   <h2>WebPro</h2>
   <div>
     <a href="#">الرئيسية</a>
-    <a href="#">الخدمات</a>
-    <a href="#">اتصل</a>
+    <a href="#services">الخدمات</a>
+    <a href="#portfolio">أعمالنا</a>
   </div>
 </nav>
 
+<!-- Hero -->
 <section class="hero">
-  <h1>🚀 موقع احترافي خرافي</h1>
-  <p>تصميم حديث + تجربة مستخدم قوية</p>
+  <h1>🚀 تصميم مواقع احترافية</h1>
+  <p>نحوّل فكرتك إلى موقع حقيقي يربح المال 💰</p>
   <a href="#" class="btn">ابدأ الآن</a>
 </section>
 
-<section class="section">
+<!-- Services -->
+<section class="section" id="services">
   <h2>✨ خدماتنا</h2>
 
   <div class="cards">
-    <div class="card">💻 تصميم مواقع</div>
-    <div class="card">🎨 UI/UX احترافي</div>
-    <div class="card">⚡ سرعة عالية</div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085">
+      <h3>💻 تطوير مواقع</h3>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1559028012-481c04fa702d">
+      <h3>🎨 تصميم UI/UX</h3>
+    </div>
+
+    <div class="card">
+      <img src="https://images.unsplash.com/photo-1461749280684-dccba630e2f6">
+      <h3>⚡ أداء وسرعة</h3>
+    </div>
+
+  </div>
+</section>
+
+<!-- Portfolio -->
+<section class="section" id="portfolio">
+  <h2>💼 أعمالنا</h2>
+
+  <div class="portfolio">
+    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f">
+    <img src="https://images.unsplash.com/photo-1492724441997-5dc865305da7">
+    <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c">
   </div>
 </section>
 

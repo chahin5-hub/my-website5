@@ -1,13 +1,11 @@
-function filterProjects(type) {
-  let projects = document.querySelectorAll(".project");
+function filterProjects(type){
+  let p=document.querySelectorAll(".project");
 
-  projects.forEach(p => {
-    if (type === "all") {
-      p.style.display = "block";
-    } else if (p.classList.contains(type)) {
-      p.style.display = "block";
-    } else {
-      p.style.display = "none";
+  p.forEach(el=>{
+    if(type==="all" || el.classList.contains(type)){
+      el.style.display="block";
+    }else{
+      el.style.display="none";
     }
   });
 }

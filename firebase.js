@@ -1,12 +1,7 @@
-// استبدل القيم بكودك من Firebase
-
 const firebaseConfig = {
-  apiKey: "YOUR_KEY",
-  authDomain: "YOUR_DOMAIN",
-  projectId: "YOUR_ID",
-  storageBucket: "YOUR_BUCKET",
-  messagingSenderId: "YOUR_MSG",
-  appId: "YOUR_APP_ID"
+  apiKey: "PUT_YOUR_KEY",
+  authDomain: "PUT_YOUR_DOMAIN",
+  projectId: "PUT_YOUR_PROJECT_ID"
 };
 
 firebase.initializeApp(firebaseConfig);

@@ -2,7 +2,6 @@
 <html lang="ar">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>تسجيل الدخول</title>
 <link rel="stylesheet" href="style.css">
 
@@ -19,25 +18,23 @@
   <input id="email" type="email" placeholder="Email"><br>
   <input id="password" type="password" placeholder="Password"><br>
 
-  <button onclick="login()">دخول</button>
   <button onclick="signup()">تسجيل</button>
+  <button onclick="login()">دخول</button>
 </div>
 
 <script>
 function signup() {
   firebase.auth().createUserWithEmailAndPassword(
     email.value, password.value
-  ).then(() => {
-    alert("تم إنشاء الحساب");
-  }).catch(err => alert(err.message));
+  ).then(()=>alert("تم إنشاء الحساب"))
+   .catch(e=>alert(e.message));
 }
 
 function login() {
   firebase.auth().signInWithEmailAndPassword(
     email.value, password.value
-  ).then(() => {
-    window.location.href = "dashboard.html";
-  }).catch(err => alert(err.message));
+  ).then(()=>window.location.href="dashboard.html")
+   .catch(e=>alert(e.message));
 }
 </script>
 

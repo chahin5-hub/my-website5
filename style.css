@@ -5,24 +5,21 @@ body {
   color: white;
 }
 
+/* Navbar */
 nav {
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 15px 30px;
   background: #020617;
 }
 
-nav ul {
-  display: flex;
-  gap: 20px;
-  list-style: none;
-}
-
 nav a {
-  color: white;
+  color: #38bdf8;
   text-decoration: none;
+  margin-left: 15px;
 }
 
+/* Hero */
 .hero {
   text-align: center;
   padding: 100px;
@@ -30,30 +27,54 @@ nav a {
 
 .btn {
   background: #38bdf8;
-  padding: 10px 25px;
-  border-radius: 10px;
-  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 8px;
   color: black;
+  text-decoration: none;
 }
 
-.section {
+/* Form */
+.form {
   text-align: center;
-  padding: 50px;
+  margin-top: 100px;
 }
 
-.boxes {
+input {
+  padding: 10px;
+  margin: 5px;
+}
+
+/* Projects */
+.filters {
+  text-align: center;
+  margin: 20px;
+}
+
+.filters button {
+  padding: 10px;
+  margin: 5px;
+  cursor: pointer;
+}
+
+.projects {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
-.box {
+.project {
   background: #1e293b;
-  padding: 20px;
-  border-radius: 15px;
+  padding: 15px;
+  border-radius: 10px;
+  transition: 0.3s;
 }
 
-.box img {
-  width: 100%;
+.project img {
+  width: 200px;
   border-radius: 10px;
+}
+
+.project:hover {
+  transform: scale(1.05);
 }

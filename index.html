@@ -3,72 +3,51 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>شركة ويب</title>
+<title>WebPro</title>
 
 <link rel="stylesheet" href="style.css">
-
-<!-- مكتبة الأنيميشن -->
-<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
 </head>
 
 <body>
 
-<!-- Navbar -->
 <nav>
   <h2>WebPro</h2>
   <ul>
     <li><a href="#">الرئيسية</a></li>
     <li><a href="#services">الخدمات</a></li>
-    <li><a href="#pricing">الأسعار</a></li>
-    <li><a href="#contact">اتصل بنا</a></li>
+    <li><a href="login.html">تسجيل الدخول</a></li>
   </ul>
 </nav>
 
-<!-- Hero -->
 <section class="hero">
-  <h1 data-aos="fade-up">نصمم مواقع احترافية 🔥</h1>
-  <p data-aos="fade-up" data-aos-delay="200">
-    احصل على موقع يشبه الشركات العالمية
-  </p>
-  <button class="btn" onclick="goPricing()" data-aos="zoom-in">ابدأ الآن</button>
+  <h1>نصمم مواقع احترافية 🔥</h1>
+  <p>اجذب الزبائن وابدأ الربح الآن</p>
+  <a href="pricing.html" class="btn">ابدأ الآن</a>
 </section>
 
-<!-- Services -->
 <section class="section" id="services">
-  <h2 data-aos="fade-up">خدماتنا</h2>
+  <h2>خدماتنا</h2>
 
   <div class="boxes">
-    <div class="box" data-aos="fade-right">💻 تصميم مواقع</div>
-    <div class="box" data-aos="fade-up">🎨 UI/UX احترافي</div>
-    <div class="box" data-aos="fade-left">🚀 سرعة وأداء</div>
+
+    <div class="box">
+      <img src="https://source.unsplash.com/300x200/?website" />
+      <h3>تصميم مواقع</h3>
+    </div>
+
+    <div class="box">
+      <img src="https://source.unsplash.com/300x200/?design" />
+      <h3>تصميم احترافي</h3>
+    </div>
+
+    <div class="box">
+      <img src="https://source.unsplash.com/300x200/?technology" />
+      <h3>تطوير سريع</h3>
+    </div>
+
   </div>
 </section>
-
-<!-- Pricing -->
-<section class="section" id="pricing">
-  <h2 data-aos="fade-up">الأسعار</h2>
-
-  <div class="boxes">
-    <div class="box" data-aos="zoom-in">Basic<br>10$</div>
-    <div class="box" data-aos="zoom-in" data-aos-delay="200">Pro<br>20$</div>
-    <div class="box" data-aos="zoom-in" data-aos-delay="400">VIP<br>50$</div>
-  </div>
-</section>
-
-<!-- Contact -->
-<section class="section" id="contact">
-  <h2 data-aos="fade-up">اتصل بنا</h2>
-  <p data-aos="fade-up">email@example.com</p>
-</section>
-
-<script src="script.js"></script>
-
-<!-- تفعيل الأنيميشن -->
-<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-<script>
-  AOS.init();
-</script>
 
 </body>
 </html>

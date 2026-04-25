@@ -1,56 +1,117 @@
 body{
   margin:0;
-  font-family:Arial;
-  background:#0f172a;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg,#0f172a,#020617);
   color:white;
 }
 
+/* Navbar */
 nav{
   display:flex;
   justify-content:space-between;
-  padding:15px;
-  background:#020617;
+  padding:20px 40px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  position:sticky;
+  top:0;
+}
+
+nav h2{
+  color:#38bdf8;
 }
 
 nav a{
-  color:#38bdf8;
-  margin-left:10px;
+  color:white;
+  margin-left:15px;
+  text-decoration:none;
+  transition:0.3s;
 }
 
+nav a:hover{
+  color:#38bdf8;
+}
+
+/* Hero */
 .hero{
   text-align:center;
-  padding:100px;
+  padding:120px 20px;
+}
+
+.hero h1{
+  font-size:45px;
 }
 
 .btn{
-  background:#38bdf8;
-  padding:10px 20px;
-  border-radius:8px;
+  display:inline-block;
+  margin-top:20px;
+  background: linear-gradient(45deg,#38bdf8,#0ea5e9);
+  padding:12px 25px;
+  border-radius:12px;
   color:black;
+  font-weight:bold;
+  transition:0.3s;
 }
 
+.btn:hover{
+  transform:scale(1.1);
+}
+
+/* Form */
 .form{
+  width:300px;
+  margin:100px auto;
+  padding:30px;
+  border-radius:20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
   text-align:center;
-  margin-top:80px;
 }
 
 input{
+  width:100%;
   padding:10px;
-  margin:5px;
+  margin:10px 0;
+  border:none;
+  border-radius:8px;
 }
 
+/* Projects */
 .projects{
   display:flex;
   justify-content:center;
-  gap:20px;
+  gap:30px;
+  flex-wrap:wrap;
 }
 
 .project{
-  background:#1e293b;
+  width:220px;
   padding:15px;
-  border-radius:10px;
+  border-radius:20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  transition:0.3s;
 }
 
 .project img{
-  width:200px;
+  width:100%;
+  border-radius:15px;
+}
+
+.project:hover{
+  transform:translateY(-10px) scale(1.05);
+}
+
+/* Filters */
+.filters{
+  text-align:center;
+  margin:20px;
+}
+
+.filters button{
+  padding:10px 20px;
+  margin:5px;
+  border:none;
+  border-radius:10px;
+  background:#38bdf8;
+  cursor:pointer;
 }
